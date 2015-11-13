@@ -19,6 +19,11 @@ toastr.options = {
 var showToast = function(flash){
   for(var i = 0; i < flash.length; i++ ){
     var msg = flash[i];
+
+    if (msg === 'notice') {
+      msg = 'info';
+    }
+
     var options = {
       notice: {},
       alert: { "timeOut": "0", "extendedTimeOut": "0" },
