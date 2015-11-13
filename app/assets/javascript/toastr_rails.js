@@ -20,8 +20,8 @@ var showToast = function(flash){
   for(var i = 0; i < flash.length; i++ ){
     var msg = flash[i];
 
-    if (msg === 'notice') {
-      msg = 'info';
+    if (msg[0] === 'notice') {
+      msg[0] = 'info';
     }
 
     var options = {
